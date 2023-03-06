@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS prices (price_id INT AUTO_INCREMENT PRIMARY KEY,brand_id INT NOT NULL,start_date TIMESTAMP NOT NULL,end_date TIMESTAMP NOT NULL,price FLOAT NOT NULL,product_id INT NOT NULL,price_list INT NOT NULL,priority INT NOT NULL,curr VARCHAR(3));
+
+ALTER TABLE prices ADD FOREIGN KEY (brand_id) REFERENCES brands(brand_id);
